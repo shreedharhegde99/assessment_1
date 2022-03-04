@@ -15,7 +15,7 @@ function Dashboard() {
 
 	// filtering id
 	useEffect(() => {
-		const filter = userData.filter((item) => item.id==Number(id));
+		const filter = userData.filter((item) => item.id===Number(id));
 
 		setData(filter);
 	}, [id]);

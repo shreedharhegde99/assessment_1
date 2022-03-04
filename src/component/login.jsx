@@ -6,7 +6,7 @@ import { Data } from "./context";
 function Login() {
 	const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {isAuth,err,handleLogin} = useContext(Data)
+  const {handleLogin} = useContext(Data)
 
 
 	const handleSubmit = (e) => {
