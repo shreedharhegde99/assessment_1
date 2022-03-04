@@ -1,0 +1,9 @@
+{
+  "short_name": "App Ringer",
+  "name": "App Ringer",
+  
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,14 @@
+.dashboard{
+  width: 100vw;
+  overflow-x:scroll ;
+}
+
+.header{
+  height:100px;
+  background: linear-gradient(to right,  rgba(0, 128, 0, 0.555) 0%,rgba(0, 128, 90, 0.555) 25%,rgba(198, 214, 50, 0.555) 75%, rgba(255, 205, 40, 0.479) 100%);;
+  display: flex;
+align-items: center;
+justify-content: center;
+font-size: x-large;
+font-family: 'Inter',sans-serif;
+}
