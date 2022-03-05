@@ -12,3 +12,35 @@ justify-content: center;
 font-size: x-large;
 font-family: 'Inter',sans-serif;
 }
+
+
+.filterContainer{
+  display: grid;
+  grid-template-columns: 30% 70%;
+
+  
+}
+.filterContainer>div{
+  margin: 0.2rem 1rem;
+}
+
+@media (max-width:550px){
+
+  .inputFilter{
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width:550px){
+  .inputFilter{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width:960px){
+  .inputFilter{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+}

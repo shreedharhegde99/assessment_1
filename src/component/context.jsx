@@ -7,7 +7,7 @@ class DataProvider extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isAuth: false,
+			isAuth: true,
 			err: false,
 		};
 		this.handleLogin = this.handleLogin.bind(this);

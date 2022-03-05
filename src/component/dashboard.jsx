@@ -53,81 +53,97 @@ function Dashboard() {
 	// console.table(userData)
 
 	return (
-    <Fragment>
-
+		<Fragment>
 			<div className="header">
 				<div>App Ringer Dashboard</div>
 			</div>
-          <div className="dashboard">
-			<div>
-				<div>
-					<select>
-						<option value="id">Id</option>
-					</select>
+			<div className="dashboard">
+				<div className="inputFilter">
+					<div className="filterContainer">
+						<div>
+							<select>
+								<option value="id">Id</option>
+							</select>
+						</div>
+						<div>
+							<input
+								type="text"
+								value={id}
+								onChange={(e) => setId(e.target.value)}
+							/>
+						</div>
+					</div>
+					<div className="filterContainer">
+						<div>
+							<select>
+								<option value="name">Name</option>
+							</select>
+						</div>
+						<div>
+							<input
+								type="text"
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+							/>
+						</div>
+					</div>
+					<div className="filterContainer">
+						<div>
+							<select>
+								<option value="email">Email</option>
+							</select>
+						</div>
+						<div>
+							<input
+								type="text"
+								value={email}
+								onChange={(e) => setEmail(e.target.value)}
+							/>
+						</div>
+					</div>
+          <div className="filterContainer">
+            <div>
 
-					<input
-						type="text"
-						value={id}
-						onChange={(e) => setId(e.target.value)}
-            />
+						<select>
+							<option value="work_profile">Work Profile</option>
+						</select>
+            </div>
+            <div>
+
+						<input
+							type="text"
+							value={profile}
+							onChange={(e) => setProfile(e.target.value)}
+              />
+              </div>
+					</div>
 				</div>
 				<div>
-					<select>
-						<option value="name">Name</option>
-					</select>
-					<input
-						type="text"
-						value={name}
-						onChange={(e) => setName(e.target.value)}
-            />
-				</div>
-				<div>
-					<select>
-						<option value="email">Email</option>
-					</select>
-					<input
-						type="text"
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-            />
-				</div>
-				<div>
-					<select>
-						<option value="work_profile">Work Profile</option>
-					</select>
-					<input
-						type="text"
-						value={profile}
-						onChange={(e) => setProfile(e.target.value)}
-            />
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Work Profile</th>
+							</tr>
+						</thead>
+						<tbody>
+							{data &&
+								data.map((item, i) => {
+									return (
+										<tr key={i}>
+											<td>{item.id}</td>
+											<td>{item.name}</td>
+											<td>{item.email}</td>
+											<td>{item.work_profile}</td>
+										</tr>
+									);
+								})}
+						</tbody>
+					</table>
 				</div>
 			</div>
-			<div>
-				<table>
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>Name</th>
-							<th>Email</th>
-							<th>Work Profile</th>
-						</tr>
-					</thead>
-					<tbody>
-						{data &&
-							data.map((item, i) => {
-								return (
-									<tr key={i}>
-                    <td>{item.id}</td>
-										<td>{item.name}</td>
-										<td>{item.email}</td>
-										<td>{item.work_profile}</td>
-									</tr>
-								);
-							})}
-					</tbody>
-				</table>
-			</div>
-    </div>
 		</Fragment>
 	);
 }
